@@ -1,0 +1,19 @@
+@import '../variables';
+
+.files {
+	padding: 1rem;
+
+	& div {
+		width: fit-content;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+}
+
+.binPos {
+	position: absolute;
+	bottom: 1rem;
+	right: 1rem;
+}

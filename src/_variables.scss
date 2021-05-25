@@ -1,0 +1,139 @@
+//// -- IMPORTS -- ////
+
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Graduate&display=swap');
+
+//// -- FONTS -- ////
+
+$arimo: 'Arimo', sans-serif;
+$pixel: 'Press Start 2P', cursive;
+$clock: 'Graduate', cursive;
+
+//// -- BORDERS -- ////
+
+/////////////////////// XS BORDER
+@mixin xsBorderOn {
+	border-top: 1px solid $borderBlack;
+	border-left: 1px solid $borderBlack;
+	border-bottom: 1px solid $borderWhite;
+	border-right: 1px solid $borderWhite;
+}
+@mixin xsBorderOff {
+	border-top: 1px solid $borderWhite;
+	border-left: 1px solid $borderWhite;
+	border-bottom: 1px solid $borderBlack;
+	border-right: 1px solid $borderBlack;
+}
+
+/////////////////////// SM BORDER
+@mixin smBorderOn {
+	border-top: 2px solid $borderBlack;
+	border-left: 2px solid $borderBlack;
+	border-bottom: 2px solid $borderWhite;
+	border-right: 2px solid $borderWhite;
+}
+@mixin smBorderOff {
+	border-top: 2px solid $borderWhite;
+	border-left: 2px solid $borderWhite;
+	border-bottom: 2px solid $borderBlack;
+	border-right: 2px solid $borderBlack;
+}
+
+/////////////////////// MD BORDER
+@mixin mdBorderOn {
+	border-top: 3px solid $borderBlack;
+	border-left: 3px solid $borderBlack;
+	border-bottom: 3px solid $borderWhite;
+	border-right: 3px solid $borderWhite;
+}
+@mixin mdBorderOff {
+	border-top: 3px solid $borderWhite;
+	border-left: 3px solid $borderWhite;
+	border-bottom: 3px solid $borderBlack;
+	border-right: 3px solid $borderBlack;
+}
+
+/////////////////////// LG BORDER
+@mixin lgborderOn {
+	border-top: 4px solid $borderBlack;
+	border-left: 4px solid $borderBlack;
+	border-bottom: 4px solid $borderWhite;
+	border-right: 4px solid $borderWhite;
+}
+@mixin lgborderOff {
+	border-top: 4px solid $borderWhite;
+	border-left: 4px solid $borderWhite;
+	border-bottom: 4px solid $borderBlack;
+	border-right: 4px solid $borderBlack;
+}
+
+//// -- OTHERS -- ////
+
+////////////////////// UNSELECTABLE
+
+@mixin unselectable {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+//// -- COLORS -- ////
+
+////////////////////// DESKTOP
+$desktopClr: hsl(181, 39%, 48%);
+
+////////////////////// BORDER COLORS
+$borderWhite: hsl(0, 0%, 98%);
+$borderGray: hsl(0, 0%, 48%);
+$borderGray2: hsl(0, 0%, 38%);
+$borderBlack: hsl(0, 0%, 21%);
+
+////////////////////// GRAY
+$mainGray: hsl(0, 0%, 75%);
+$gray1: hsl(0, 0, 71%);
+$gray2: hsl(0, 0, 67%);
+$gray3: hsl(0, 0, 63%);
+$gray4: hsl(0, 0, 59%);
+$gray5: hsl(0, 0, 55%);
+$gray6: hsl(0, 0, 51%);
+$gray7: hsl(0, 0, 47%);
+
+$whiteClr: rgb(250, 250, 250);
+$blackClr: rgb(15, 14, 15);
+
+/////////////////////// WINDOW BAR GRADIENTS
+
+$windowBar: linear-gradient(to right, hsl(0, 0%, 50%), hsl(0, 0%, 67%));
+$windowBarFocus: linear-gradient(
+	to right,
+	hsl(241, 95%, 37%),
+	hsl(219, 85%, 50%)
+);
+
+/////////////////////// BLUE SCREEN
+$bluescreen: hsl(241, 98%, 48%);
+
+/////////////////////// HOVER
+$sidebarHover: hsl(249, 93%, 30%);
+
+/////////////////////// FILE FOCUS
+$fileFocus: rgb(5, 45, 177);
+
+/////////////////////// BLUE FILTER
+$blueFilter: brightness(50%) sepia(100%) hue-rotate(-180deg) saturate(900%)
+	contrast(1.2);
+
+/////////////////////// DOTS
+@mixin dots {
+	background-image: radial-gradient(rgb(225, 225, 225) 1px, transparent 0);
+	background-size: 2px 2px;
+}
+
+//// -- BOX SHADOW -- ////
+
+$compShadow: hsla(0, 0%, 0%, 0.08) 0px 4px 12px;
+$compShadow2: hsla(0, 0%, 0%, 0.1) 0px 0px 5px 0px,
+	hsla(0, 0%, 0%, 0.1) 0px 0px 1px 0px;
+$compShadow3: hsla(0, 0%, 0%, 0.18) 0px 2px 4px;

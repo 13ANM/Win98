@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Bluescreen from './components/Bluescreen';
+import Desktop from './components/Desktop';
+import { AppProvider } from './context/AppContext';
+import Blackscreen from './components/Blackscreen';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<div className='app'>
+			<AppProvider>
+				<Router>
+					<Switch>
+						<Route path='/404'>
+							<Bluescreen />
+						</Route>
+						<Route exact path='/'>
+							<Desktop />
+						</Route>
+						<Route path='/off'>
+							<Blackscreen />
+						</Route>
+					</Switch>
+				</Router>
+			</AppProvider>
+		</div>
+	);
 }
 
 export default App;

@@ -1,0 +1,12 @@
+@import '../../variables';
+
+.numberDisplay {
+	display: grid;
+	place-content: center;
+	width: 5rem;
+	height: 3rem;
+	background: hsl(0, 0%, 0%);
+	font-family: $clock;
+	font-size: 2rem;
+	color: hsl(0, 100%, 50%);
+}

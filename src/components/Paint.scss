@@ -1,0 +1,38 @@
+@import '../variables';
+
+.paint {
+	@include smBorderOff;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	margin: 4rem 8rem;
+	background: $mainGray;
+	z-index: 999;
+	overflow: hidden;
+}
+
+.displayNone {
+	display: none;
+}
+
+.paintFocus {
+	z-index: 1001;
+	& .window__bar {
+		background: $windowBarFocus;
+
+		& p {
+			color: $whiteClr;
+		}
+	}
+}
+
+.paint__canvas {
+	width: 45rem;
+	height: 30rem;
+	background: $mainGray;
+
+	& canvas {
+		background: $whiteClr;
+		padding: 1rem;
+	}
+}

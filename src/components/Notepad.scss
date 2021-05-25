@@ -1,0 +1,87 @@
+@import '../variables';
+
+.notepad {
+	@include smBorderOff;
+	display: flex;
+	flex-direction: column;
+	margin: 2rem 4rem;
+	background: $mainGray;
+	z-index: 999;
+	font-family: $arimo;
+	overflow: hidden;
+}
+
+.displayNone {
+	display: none;
+}
+
+.notepadFocus {
+	z-index: 1001;
+	& .window__bar {
+		background: $windowBarFocus;
+
+		& p {
+			color: $whiteClr;
+		}
+	}
+
+	& .notepad__options {
+		& button {
+			color: $blackClr;
+		}
+	}
+}
+
+.max {
+	width: 100%;
+	height: calc(100% - 2rem);
+}
+
+.notepad__options {
+	display: flex;
+	font-size: 0.85rem;
+	font-weight: 500;
+	height: 1.5rem;
+
+	& button {
+		margin: 0.1rem 0.2rem;
+		border: none;
+		background: none;
+		padding: 0 0.2rem;
+		height: 80%;
+		color: $gray7;
+
+		&:hover {
+			@include xsBorderOn;
+		}
+
+		&:focus {
+			@include xsBorderOn;
+			@include dots;
+		}
+	}
+
+	& span {
+		text-decoration: underline;
+	}
+}
+
+.notepad__input {
+	flex: 1;
+	margin-bottom: 0;
+	& textarea {
+		position: relative;
+		min-width: 35rem;
+		min-height: 25rem;
+		width: 100%;
+		height: 100%;
+		font-size: 1.2rem;
+		font-weight: 600;
+		border-radius: 0;
+		resize: none;
+		font-family: $arimo;
+		font-weight: 700;
+		padding: 0.1rem;
+		word-break: break-all;
+	}
+}

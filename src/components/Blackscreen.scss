@@ -1,0 +1,17 @@
+.blackscreen {
+	width: 100%;
+	height: 100vh;
+	background: black;
+	animation: shutdown 1s step-end;
+
+	& a {
+		width: 100rem;
+		height: 100vh;
+	}
+}
+
+@keyframes shutdown {
+	90% {
+		background: rgb(75, 167, 169);
+	}
+}

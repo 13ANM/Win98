@@ -1,0 +1,43 @@
+@import '../variables';
+
+.browser {
+	@include smBorderOff;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	margin: 6rem 12rem;
+	min-width: 30rem;
+	background: $mainGray;
+	z-index: 999;
+	overflow: hidden;
+}
+
+.browserFocus {
+	z-index: 1001;
+	& .window__bar {
+		background: $windowBarFocus;
+
+		& p {
+			color: $whiteClr;
+		}
+	}
+}
+
+.browser__location {
+	padding: 0.2rem;
+
+	& input {
+		padding: 0.5rem;
+		width: 100%;
+		font-family: $arimo;
+		font-weight: 600;
+		letter-spacing: 0.1rem;
+	}
+}
+
+.browser__content {
+	& img {
+		width: 40rem;
+		border: 1px solid gray;
+	}
+}

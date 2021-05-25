@@ -1,0 +1,66 @@
+@import '../variables';
+
+.console {
+	@include smBorderOff;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	margin: 10rem 18rem;
+	min-width: 40rem;
+	background: $mainGray;
+	z-index: 999;
+	overflow: hidden;
+}
+
+.displayNone {
+	display: none;
+}
+
+.consoleFocus {
+	z-index: 1001;
+	& .window__bar {
+		background: $windowBarFocus;
+
+		& p {
+			color: $whiteClr;
+		}
+	}
+}
+
+.console__main {
+	display: flex;
+	flex-direction: column;
+
+	& .console__desc {
+		@include unselectable;
+		background: $blackClr;
+		color: $mainGray;
+		font-family: $pixel;
+		font-size: 0.6rem;
+		padding: 2rem 0rem;
+	}
+
+	& .console__input {
+		@include unselectable;
+		display: flex;
+		flex-direction: column;
+		background: $blackClr;
+		color: $mainGray;
+		font-family: $pixel;
+		font-size: 0.6rem;
+
+		& textarea {
+			background: $blackClr;
+			border: none;
+			outline: none;
+			cursor: default;
+			color: $mainGray;
+			resize: none;
+			width: 100%;
+			min-height: 14rem;
+			font-family: $pixel;
+			font-size: 0.6rem;
+			margin-top: 1rem;
+		}
+	}
+}

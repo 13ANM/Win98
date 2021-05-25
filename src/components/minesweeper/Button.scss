@@ -1,0 +1,73 @@
+@import '../../variables';
+
+.button {
+	display: grid;
+	place-items: center;
+	width: 2rem;
+	height: 2rem;
+	border-top: 3px solid hsl(0, 0%, 100%);
+	border-left: 3px solid hsl(0, 0%, 100%);
+	border-right: 3px solid hsl(0, 0%, 48%);
+	border-bottom: 3px solid hsl(0, 0%, 38%);
+	font-family: $clock;
+	font-weight: bold;
+	cursor: pointer;
+
+	&:active {
+		border-top-color: hsl(0, 0%, 48%);
+		border-left-color: hsl(0, 0%, 38%);
+		border-right-color: hsl(0, 0%, 100%);
+		border-bottom-color: hsl(0, 0%, 100%);
+	}
+
+	& span {
+		display: block;
+		margin-left: 2px;
+		font-size: 12px;
+	}
+}
+
+.button.visible {
+	border-color: hsl(0, 0%, 48%);
+	border-width: 1px;
+}
+
+.button.red {
+	background: hsl(0, 100%, 50%);
+}
+
+.button.visible.value-0 {
+	background: hsl(0, 0%, 74%);
+}
+
+.value-1 {
+	color: hsl(240, 100%, 50%);
+}
+
+.value-2 {
+	color: hsl(120, 100%, 25%);
+}
+
+.value-3 {
+	color: hsl(0, 100%, 50%);
+}
+
+.value-4 {
+	color: hsl(300, 100%, 25%);
+}
+
+.value-5 {
+	color: hsl(0, 100%, 25%);
+}
+
+.value-6 {
+	color: hsl(174, 72%, 56%);
+}
+
+.value-7 {
+	color: hsl(0, 0%, 0%);
+}
+
+.value-8 {
+	color: hsl(0, 0%, 50%);
+}

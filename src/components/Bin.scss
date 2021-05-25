@@ -1,0 +1,84 @@
+@import '../variables';
+
+.bin {
+	@include smBorderOff;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	margin: 10rem 18rem;
+	min-width: 30rem;
+	background: $mainGray;
+	z-index: 999;
+	overflow: hidden;
+}
+
+.binFocus {
+	z-index: 1001;
+	& .window__bar {
+		background: $windowBarFocus;
+
+		& p {
+			color: $whiteClr;
+		}
+	}
+}
+
+.bin__location {
+	padding: 0.2rem;
+
+	& input {
+		padding: 0.5rem;
+		width: 100%;
+		font-family: $arimo;
+		font-weight: 600;
+		letter-spacing: 0.1rem;
+	}
+}
+
+.bin__options {
+	display: flex;
+	justify-content: space-evenly;
+	height: 4rem;
+	& button {
+		border: none;
+		background: none;
+		padding: 0.4rem 0.2rem;
+
+		& img {
+			width: 1.5rem;
+			margin-bottom: 0.5rem;
+		}
+
+		& p {
+			font-size: 0.7rem;
+		}
+
+		&:active {
+			@include xsBorderOn;
+		}
+	}
+}
+
+.bin__files {
+	display: flex;
+	justify-content: space-evenly;
+	width: 100%;
+	min-height: 20rem;
+	background: $whiteClr;
+	border: 2px solid gray;
+
+	& button {
+		height: 5rem;
+		margin-top: 2rem;
+
+		&:focus {
+			mix-blend-mode: multiply;
+		}
+	}
+}
+
+.clear {
+	& * {
+		display: none;
+	}
+}

@@ -1,0 +1,115 @@
+@import '../variables';
+
+.startbar {
+	@include unselectable;
+	position: fixed;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 2rem;
+	background: $mainGray;
+	border-top: 1px solid $whiteClr;
+	padding: 0.1rem;
+	z-index: 1000;
+
+	& div {
+		display: flex;
+		align-items: center;
+		height: 100%;
+	}
+}
+
+.startbar__menu {
+	@include smBorderOff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: $mainGray;
+	width: 5rem;
+	height: 100%;
+	font-weight: 700;
+	font-size: 1.1rem;
+
+	& img {
+		position: relative;
+		width: 1.5rem;
+		image-rendering: pixelated;
+	}
+}
+
+.startbar__menuFocus {
+	@include smBorderOn;
+}
+
+.dotted {
+	border: 1px dotted black;
+}
+
+.startbar__space {
+	border-left: 1px solid $blackClr;
+	border-right: 1px solid $whiteClr;
+	margin: 0 0.5rem;
+}
+
+.startbar__tabs {
+	flex: 1;
+	.tab {
+		@include smBorderOff;
+		display: flex;
+		align-items: center;
+		width: 10rem;
+		height: 100%;
+		background: $mainGray;
+
+		& img {
+			width: 1rem;
+			margin: 0 0.5rem;
+		}
+	}
+	.tabMin {
+		@include smBorderOn;
+		display: flex;
+		align-items: center;
+		width: 10rem;
+		height: 90%;
+		background: $whiteClr;
+		font-weight: 600;
+		@include dots;
+
+		& img {
+			width: 1rem;
+			margin: 0 0.5rem;
+		}
+	}
+}
+
+.startbar__time {
+	@include xsBorderOn;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	background: $gray1;
+
+	& * {
+		margin: 0 0.5rem;
+	}
+
+	& p {
+		font-size: 0.9rem;
+		margin: 0 1rem;
+	}
+
+	.startbar__timeSpace {
+		border: 1px dotted gray;
+		height: 80%;
+	}
+
+	& .startbar__speaker {
+		width: 1rem;
+		height: 1rem;
+	}
+}

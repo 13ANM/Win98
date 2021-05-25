@@ -1,0 +1,103 @@
+@import '../variables';
+
+.myComputer {
+	@include smBorderOff;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	width: 40rem;
+	background: $mainGray;
+	z-index: 999;
+	font-family: $arimo;
+	overflow: hidden;
+}
+
+.myComputerFocus {
+	z-index: 1001;
+	& .window__bar {
+		background: $windowBarFocus;
+
+		& p {
+			color: $whiteClr;
+		}
+	}
+
+	& .myComputer__options {
+		& button {
+			color: $blackClr;
+		}
+	}
+
+	& .myComputer__location {
+		& input {
+			background: $whiteClr;
+			color: $blackClr;
+		}
+	}
+}
+
+.myComputer__options {
+	display: flex;
+	font-size: 0.85rem;
+	font-weight: 500;
+	height: 1.5rem;
+
+	& button {
+		margin: 0.1rem 0.2rem;
+		border: none;
+		background: none;
+		padding: 0 0.2rem;
+		height: 80%;
+		color: $gray7;
+
+		&:hover {
+			@include xsBorderOn;
+		}
+
+		&:focus {
+			@include xsBorderOn;
+			@include dots;
+		}
+	}
+
+	& span {
+		text-decoration: underline;
+	}
+}
+
+.myComputer__location {
+	padding: 0.2rem;
+
+	& input {
+		padding: 0.5rem;
+		width: 100%;
+		font-family: $arimo;
+		font-weight: 600;
+		letter-spacing: 0.1rem;
+		border-radius: 0%;
+		border: 1px solid rgb(155, 155, 155);
+	}
+}
+
+.myComputer__files {
+	display: grid;
+	grid-template-columns: repeat(6, auto);
+	width: 100%;
+	height: 100%;
+	min-height: 20rem;
+	background: $whiteClr;
+	border: 2px solid gray;
+
+	& img {
+		image-rendering: pixelated;
+	}
+
+	& button {
+		height: 5rem;
+		margin-top: 2rem;
+
+		&:focus {
+			mix-blend-mode: multiply;
+		}
+	}
+}
